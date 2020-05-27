@@ -1,0 +1,26 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#wrapper {
+	height: 100%;
+	width: 80%;
+	padding: 1em;
+	margin: 0 auto;
+}
+
+#header {
+
+	position: relative;
+	text-align: center;
+}
+
+#headerLabel {
+	display: inline-block;
+	font-family: Georgia;
+	font-size: 2em;
+}
+
+
+

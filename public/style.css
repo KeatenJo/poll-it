@@ -1,0 +1,209 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+@font-face {
+	font-family: Lato;
+	src: url(Lato/Lato-Regular.ttf)
+}
+
+@font-face {
+	font-family: OpenSans;
+	src: url(Open_Sans/OpenSans-Regular.ttf)
+}
+
+
+#wrapper {
+	height: 100%;
+	width: 80%;
+	padding: 1em;
+	margin: 0 auto;
+}
+
+#header {
+	color: #EE4266;
+	position: relative;
+	text-align: center;
+
+}
+
+#headerLabel {
+	display: inline-block;
+	font-size: 2em;
+	font-family: Lato;
+}
+
+#activePollDiv{
+	text-align: center;
+}
+
+#poll_data {
+	position: relative;
+	font-family: Lato;
+	text-align: center;
+}
+
+
+.Poll_title_and_data {
+	color: #540D6E;
+	border-bottom: solid 0.1em #1F271B;
+}
+
+#activePollHeader {
+	text-align: center;
+	font-family: Lato;
+	border-bottom: solid 0.1em #1F271B;
+	color: #EE4266;
+}
+
+#previousPollHeader {
+	text-align: left;
+	font-family: Lato;
+	border-bottom: solid 0.1em #1F271B;
+	color: #EE4266;
+
+}
+.candidatesData {
+	display: flex;
+	text-align: center;
+	background-color: #F3FCF0;
+	color: #EE4266;
+	font-family: Lato;
+
+}
+.candidateData {
+	flex: 1;
+	padding: 1em;
+}
+
+#previousPolls {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+#UpcomingPoll {
+	text-align: center;
+	color: #540D6E;
+	border-bottom: solid 0.1em #1F271B;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+}
+
+#upcomingPollHeader {
+	text-align: left;
+	font-family: Lato;
+	border-bottom: solid 0.1em #1F271B;
+	color: #EE4266;
+}
+
+#createPollDiv {
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;	
+}
+
+#createPollHeader {
+	text-align: left;
+	font-family: Lato;
+	border-bottom: solid 0.1em #1F271B;
+	color: #EE4266;
+}
+
+#createFormDiv {
+	padding: 2em;
+	color: #EE4266;
+}
+
+.create_polls_inputs {
+	padding: 1em;
+}
+
+input {
+	padding: 1em;
+	font-size: 1em;
+	outline: none;
+	border-bottom: solid 0.1em #1F271B;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	color: #EE4266;
+	font-family: OpenSans;
+
+}
+
+.create_poll_input_label {
+	padding-top: 1em;
+	font-family: OpenSans;
+}
+#createPollButtonDiv {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border-bottom: solid 0.1em #1F271B;
+}
+#createPollButton:hover {
+	background-color: white;
+	color: #EE4266;	
+	border: solid 0.2em #EE4266;
+}
+
+#createPollButton {
+	padding: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	outline: none;
+	font-family: Lato;
+	border-radius: 1em;
+	background-color: #EE4266;
+	color: white;
+	font-size: 1.2em;
+	transition: 0.9s;
+	cursor: pointer;
+}
+.voteButtons:hover {
+	background-color: white;
+	color: #EE4266;
+	border: solid 0.2em #EE4266;
+}
+
+.voteButtons {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 3em;
+	padding-right: 3em;
+	outline: none;
+	font-family: Lato;
+	border-radius: 1em;
+	background-color: #EE4266;
+	color: white;
+	font-size: 1.2em;
+	transition: 0.9s;
+	border: solid 0.2em white;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+	padding-right: 3em;
+}
+.headerClickableStyles:hover {
+	color: #540D6E;
+	transform: scale(1.5,1.5);
+	cursor: pointer;
+}
+.headerClickableStyles {
+	display: inline-block;
+	padding-left: 2em;
+	padding-right: 2em;
+	transition: 0.5s;
+}
+
+.prev_poll_data {
+	position: relative;
+	font-family: Lato;
+	text-align: center;
+	height: 40em;
+	overflow: scroll;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>POLL IT!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="description" content="Create and Participate in polls created by others.">
+</head>
+
+<body>
+	<div id="wrapper">
+		<section id="header">
+			<div id="headerLabel">
+				<h1>Poll It!</h1>
+			</div>
+		</section>
+
+		<main>
+			<section id="activePollDiv" v-if="activePoll != null">
+				<div class="poll_data">
+					<div id="activePollHeader">
+						<h2 class="headerClickableStyles">Active Poll</h2>
+						<h2 class="headerClickableStyles">Upcomming Poll</h2>
+						<h2 class="headerClickableStyles">Previous Polls</h2>
+						<h2 class="headerClickableStyles">Create Poll</h2>
+					</div>
+					<div class="Poll_title_and_data">
+						<h2 v-if="activePoll != null">{{activePoll.name}}</h2>
+						<h4 v-if="activePoll != null">Total Votes:</h4>
+						<h4 v-if="activePoll != null">{{activePoll.totalVotes}}</h4>
+					</div>
+				</div>
+				<div class="candidatesData">
+
+					<div class="candidateData">
+						<h3 v-if="activePoll != null">{{activePoll.candidate1Name}}</h3>
+						<h4 v-if="activePoll != null">{{activePoll.candidate1Votes}}</h4>
+						<button class="voteButtons" v-on:click="voteForCandidate1">Vote!</button>
+					</div>
+
+					<div class="candidateData">
+						<h3 v-if="activePoll != null">{{activePoll.candidate2Name}}</h3>
+						<h4 v-if="activePoll != null">{{activePoll.candidate2Votes}}</h4>
+						<button class="voteButtons" v-on:click="voteForCandidate2">Vote!</button>
+					</div>
+				</div>
+				
+
+			</section>
+			
+			<section id="UpcomingPoll" v-if="upcommingPoll != null">
+				<div id="upcomingPollHeader">
+					<h2>Upcoming Poll</h2>
+				</div>
+
+				<h3>{{upcommingPoll.name}}</h3>
+			</section>
+			<section id="createPollDiv">
+				<div id="createPollHeader">
+					<h2>Create a Poll</h2>
+				</div>
+				<div id="createFormDiv">
+					<div id="createFormHeader">
+						<h2> Create a Poll</h2>
+						<h4>Let your poll so shine.</h4>
+					</div>
+					<div class="create_polls_inputs">
+						<input type="text" placeholder="Poll Name" v-model="pollName">
+						<div class="create_poll_input_label">
+							<label>Give your poll a name!</label>
+						</div>
+					</div>
+
+					<div class="create_polls_inputs">
+						<input type="text" placeholder="Option One" v-model="candidate1Name">
+						<div class="create_poll_input_label">
+							<label>Give your poll a candidate!</label>
+						</div>
+
+					</div>
+
+					<div class="create_polls_inputs">
+						<input type="text" placeholder="Option Two" v-model="candidate2Name">
+						<div class="create_poll_input_label">
+							<label>Give your poll another candidate!</label>
+						</div>
+
+					</div>
+					<div id="createPollButtonDiv">
+						<button id="createPollButton" v-on:click="onClickCreatePoll">Create Poll!</button>
+					</div>
+				</div>
+			</section>
+
+			<section id="previousPolls" v-if="previousPolls.length > 0">
+
+				<div id="previousPollHeader">
+					<h2>Previous Polls</h2>
+				</div>
+
+				<div class="prev_poll_data">
+
+					<ul>
+						<li v-for="poll in previousPolls">
+
+							<div class="Poll_title_and_data">
+								<h2>{{poll.name}}</h2>
+								<h4>Total Votes:</h4>
+								<h4>{{poll.totalVotes}}</h4>
+							</div>
+							<div class="candidatesData">
+
+								<div class="candidateData">
+									<h3>{{poll.candidate1Name}}</h3>
+									<h4>{{poll.candidate1Votes}}</h4>
+								</div>
+
+								<div class="candidateData">
+									<h3>{{poll.candidate2Name}}</h3>
+									<h4>{{poll.candidate2Votes}}</h4>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</section>
+
+		</main>
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
