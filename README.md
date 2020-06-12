@@ -1,10 +1,6 @@
-* Resource 
- ** Polls
- *** Candidate1
- *** Candidate2
- *** Total Votes
+# Poll-It!
 
-
-* URL
+## Simple polling web application written using:
+    Express.js, VUE.js, HTML, CSS3.
 
  ** https://poll-it-now.herokuapp.com/
